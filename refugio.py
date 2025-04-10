@@ -96,4 +96,26 @@ class Refugio:
         if mascota_nueva is not None:
             adoptante.setMascota(mascota_nueva)
 
+    def consultarMascota(self, mascota_id, nombre=None, tipo=None, edad=None, disponibilidad=None):
+        mascota = self.buscarMascota(mascota_id)
+        if not mascota:
+            raise ValueError("La mascota con ese ID no existe.")
 
+        if nombre is not None:
+            mascota.getNombre
+        if tipo is not None:
+            mascota.getTipo
+        if edad is not None:
+            mascota.getEdad
+        if disponibilidad is not None:
+            mascota.getDisponibilidad
+
+    def consultarAdoptante(self, dni, nombre=None, mascota=None):
+        adoptante = self.buscarAdoptante(dni)
+        if not adoptante:
+            raise ValueError("El adoptante con ese ID no existe.")
+
+        if nombre is not None:
+            adoptante.getNombre
+        if mascota is not None:
+            adoptante.getMascota
