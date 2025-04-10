@@ -36,7 +36,7 @@ class Refugio:
     def getDireccion(self):
         return self.direccion
 
-    def agregarMascota(self, mascota):
+    def agregarMascota(self, mascota:Mascota):
         if mascota in self.mascotas:
             raise ValueError("La mascota ya está registrada en el refugio.")
         self.mascotas.append(mascota)
@@ -54,7 +54,7 @@ class Refugio:
                 return mascota
         return None
 
-    def agregarAdoptante(self, adoptante):
+    def agregarAdoptante(self, adoptante: Adoptante):
         if adoptante in self.adoptantes:
             raise ValueError("El adoptante ya está registrado en el refugio.")
         self.adoptantes.append(adoptante)
