@@ -45,5 +45,9 @@ class Adoptante:
         for adopcion in self.historial_adopciones:
             print(adopcion.consultarAdopcion())
 
+    def mascotasSaludar(self):
+        return Mascota.saludar(self)
+
     def __str__(self):
        return f"Nombre: {self.nombre}\n DNI: {self.dni}\n Cantidad de adopciones: {len(self.historial_adopciones)}"
+    
