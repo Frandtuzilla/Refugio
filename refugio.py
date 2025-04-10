@@ -86,4 +86,14 @@ class Refugio:
         if nueva_disponibilidad is not None:
             mascota.setDisponibilidad(nueva_disponibilidad)
 
+    def modificarAdoptante(self, dni, nuevo_nombre=None, mascota_nueva=None):
+        adoptante = self.buscarAdoptante(dni)
+        if not adoptante:
+            raise ValueError("El adoptante con ese ID no existe.")
+
+        if nuevo_nombre is not None:
+            adoptante.setNombre(nuevo_nombre)
+        if mascota_nueva is not None:
+            adoptante.setMascota(mascota_nueva)
+
 
