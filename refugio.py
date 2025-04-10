@@ -119,3 +119,11 @@ class Refugio:
             adoptante.getNombre
         if mascota is not None:
             adoptante.getMascota
+
+    def consultarAdopciones(self):
+        for adoptante in self.adoptantes:
+            adopciones = adoptante.getAdopciones()
+            if adopciones:
+                print(f"Adoptante: {adoptante.getNombre()} (DNI: {adoptante.getDNI()})")
+                for adopcion in adopciones:
+                    print(f"  - {adopcion}")
