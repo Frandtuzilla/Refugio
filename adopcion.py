@@ -3,7 +3,7 @@ from adoptante import Adoptante
 
 class Adopcion:
     
-    def __init__(self, id_adopcion, adoptante, mascota, fecha_adopcion):
+    def __init__(self, id_adopcion: int, adoptante:Adoptante, mascota:Mascota, fecha_adopcion:str):
         self.setIdAdopcion(id_adopcion)
         self.setAdoptante(adoptante)
         self.setMascota(mascota)
@@ -46,3 +46,4 @@ class Adopcion:
 
     def __str__(self):
         return f"ID Adopción: {self.id_adopcion}, Adoptante: {self.adoptante.getNombre()}, Mascota: {self.mascota.getNombre()}, Fecha: {self.fecha_adopcion}"
+    
