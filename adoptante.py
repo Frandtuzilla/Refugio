@@ -37,3 +37,10 @@ class Adoptante:
         if not isinstance(adopcion, Adopcion):
             raise TypeError("La adopción debe ser una instancia de la clase Adopcion.")
         self.historial_adopciones.append(adopcion)
+    
+    def consultarAdopciones(self):
+        if not self.historial_adopciones:
+            print("No hay adopciones registradas.")
+            return
+        for adopcion in self.historial_adopciones:
+            print(adopcion.consultarAdopcion())
