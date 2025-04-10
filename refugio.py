@@ -1,0 +1,73 @@
+from mascota import Mascota 
+from adoptante import Adoptante
+from adopcion import Adopcion 
+
+class Refugio:
+    
+    def __init__(self, nombre, nit, direccion):
+        self.setNombre(nombre)
+        self.setNIT(nit)
+        self.setDireccion(direccion)
+        self.mascotas = []
+        self.adoptantes = []
+        self.adopciones = []
+
+    def setNombre(self, nombre):
+        if not isinstance(nombre, str) or not nombre.strip():
+            raise ValueError("El nombre debe ser una cadena de texto no vacía.")
+        self.nombre = nombre
+
+    def getNombre(self):
+        return self.nombre
+
+    def setNIT(self, nit):
+        if not isinstance(nit, str) or not nit.strip():
+            raise ValueError("El NIT debe ser una cadena de texto no vacía.")
+        self.nit = nit
+
+    def getNIT(self):
+        return self.nit
+
+    def setDireccion(self, direccion):
+        if not isinstance(direccion, str) or not direccion.strip():
+            raise ValueError("La dirección debe ser una cadena de texto no vacía.")
+        self.direccion = direccion
+
+    def getDireccion(self):
+        return self.direccion
+
+    def agregarMascota(self, mascota):
+        if mascota in self.mascotas:
+            raise ValueError("La mascota ya está registrada en el refugio.")
+        self.mascotas.append(mascota)
+
+    def eliminarMascota(self, mascota_id):
+        mascota = self.buscarMascota(mascota_id)
+        if mascota:
+            self.mascotas.remove(mascota)
+        else:
+            raise ValueError("La mascota no existe en el refugio.")
+
+    def buscarMascota(self, mascota_id):
+        for mascota in self.mascotas:
+            if mascota.getId() == mascota_id:
+                return mascota
+        return None
+
+    def agregarAdoptante(self, adoptante):
+        if adoptante in self.adoptantes:
+            raise ValueError("El adoptante ya está registrado en el refugio.")
+        self.adoptantes.append(adoptante)
+
+    def eliminarAdoptante(self, dni):
+        adoptante = self.buscarAdoptante(dni)
+        if adoptante:
+            self.adoptantes.remove(adoptante)
+        else:
+            raise ValueError("El adoptante no existe en el refugio.")
+
+    def buscarAdoptante(self, dni):
+        for adoptante in self.adoptantes:
+            if adoptante.getDNI() == dni:
+                return adoptante
+        return None
