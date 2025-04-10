@@ -19,6 +19,6 @@ class Gato(Mascota):
 
 if __name__=="__main__":
 
-    Tago = Gato('Tago', 8, 'Gato', 8, True, 'go')
+    Tago = Gato('Tago', 8, 'Gato', 8, True, 'sociable')
     print(Tago)
     Tago.saludar('Miau')
