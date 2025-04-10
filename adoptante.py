@@ -1,4 +1,5 @@
 from mascota import Mascota
+from adopcion import Adopcion
 
 class Adoptante:
     
@@ -32,5 +33,7 @@ class Adoptante:
     def getMascota(self):
         return self.mascota
     
-    '''def mascotasSaludar(self):'''
-    
+    def registrarAdopcion(self, adopcion):
+        if not isinstance(adopcion, Adopcion):
+            raise TypeError("La adopción debe ser una instancia de la clase Adopcion.")
+        self.historial_adopciones.append(adopcion)
