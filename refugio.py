@@ -71,3 +71,19 @@ class Refugio:
             if adoptante.getDNI() == dni:
                 return adoptante
         return None
+
+    def modificarMascota(self, mascota_id, nuevo_nombre=None, nuevo_tipo=None, nueva_edad=None, nueva_disponibilidad=None):
+        mascota = self.buscarMascota(mascota_id)
+        if not mascota:
+            raise ValueError("La mascota con ese ID no existe.")
+
+        if nuevo_nombre is not None:
+            mascota.setNombre(nuevo_nombre)
+        if nuevo_tipo is not None:
+            mascota.setTipo(nuevo_tipo)
+        if nueva_edad is not None:
+            mascota.setEdad(nueva_edad)
+        if nueva_disponibilidad is not None:
+            mascota.setDisponibilidad(nueva_disponibilidad)
+
+
