@@ -10,9 +10,13 @@ class Gato(Mascota):
         
     def getRasgo(self):
         return self.rasgo
+    
     def setAgua(self, rasgo_nuevo):
         self.rasgo = rasgo_nuevo
         
+    def saludar(self):
+        print('Miau')
+
     @staticmethod
     def ValidacionRasgo(rasgo):
         return rasgo in Gato.rasgos_gatos
@@ -21,4 +25,4 @@ if __name__=="__main__":
 
     Tago = Gato('Tago', 5, 'Perro', 8, True, 'sociable')
     print(Tago)
-    Tago.saludar('Miau')
+    

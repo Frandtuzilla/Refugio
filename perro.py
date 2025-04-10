@@ -9,9 +9,12 @@ class Perro(Mascota):
         return self.lazarillo
     def setAgua(self, lazarillo_nuevo):
         self.lazarillo = lazarillo_nuevo
-
+    
+    def saludar(self):
+        print('Guau')
+        
 if __name__=="__main__":
     #pruebo el codigo
     Coco = Perro('Coco', 5, 'Perro', 8, True, True)
     print(Coco)
-    Coco.saludar('Guau')
+    

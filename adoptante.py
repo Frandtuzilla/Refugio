@@ -1,9 +1,12 @@
+from mascota import Mascota
+
 class Adoptante:
     
-    def __init__(self, nombre, dni):
+    def __init__(self, nombre, dni, mascota):
         self.setNombre(nombre)
         self.setDNI(dni)
         self.historial_adopciones = []
+        self.setMascota(mascota)
 
     def setNombre(self, nombre):
         if not isinstance(nombre, str) or not nombre.strip():
@@ -20,3 +23,14 @@ class Adoptante:
 
     def getDNI(self):
         return self.dni
+    
+    def setMascota(self,mascota):
+        if not isinstance(mascota, Mascota):
+            raise TypeError('La mascota debe ser una instancia de la clase Mascota')
+        self.mascota=mascota
+
+    def getMascota(self):
+        return self.mascota
+    
+    '''def mascotasSaludar(self):'''
+    

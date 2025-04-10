@@ -83,9 +83,8 @@ class Mascota:
         Mascota.ids_usados.remove(self.id)
         print(f"El objeto {self.nombre} ha sido eliminado y su ID {self.id} ha sido liberado.")
     
-    @staticmethod
-    def saludar(saludo):
-        print(saludo)
+    def saludar(self):
+        pass
         
 
 if __name__ == "__main__": # Para verificar Mascota
