@@ -1,6 +1,6 @@
 class Mascota:
     
-    TIPOS = ["Perro", "Gato", "Tortuga"]
+    TIPOS = ["Perro", "Gato", "Tortuga", "Pez"]
 
     ids_usados = []
 

@@ -3,7 +3,7 @@ from mascota import *
 class Pez(Mascota):
     agua=["Agua dulce", "Agua salada"]
     def __init__(self, nombre: str, id:int, tipo:str, edad:int, disponibilidad:bool, agua:str):
-        super.__init__(nombre, id, tipo, edad, disponibilidad)
+        super().__init__(nombre, id, tipo, edad, disponibilidad)
         if agua in Pez.agua:
             self.agua=agua
         else: 
@@ -19,5 +19,5 @@ class Pez(Mascota):
 
 # Prueba del código
 
-pez1=Pez("Nemo", 1234, "Pez payaso", 12,True, "Agua")
-
+pez1=Pez("Nemo", 1234, "Pez", 12, True, "Agua dulce")
+pez1.saludar("dar 2 vueltas")
