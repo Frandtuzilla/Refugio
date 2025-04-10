@@ -13,4 +13,5 @@ class Perro(Mascota):
 if __name__=="__main__":
     #pruebo el codigo
     Coco = Perro('Coco', 5, 'Perro', 8, True, True)
+    print(Coco)
     Coco.saludar('Guau')
